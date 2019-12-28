@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="public/js/jquery-3.4.1.min.js"></script>
+	<script src="public/wow/wow.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="public/moment/moment.js"></script>
+	<link rel="stylesheet" href="public/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="public/wow/animate.css" />
+	<link rel="stylesheet" href="public/css/style_index.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script src="public/js/index.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kan Pro</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<header>
+			<div class="row">
+				<div class="col-md-12 mynav header1">
+					<nav class="navbar navbar-expand-md navbar-light">
+						<img src="public/images/logo.png" width="160" class="img-responsive wow fadeInLeft">
+						<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarCollapse">
+							<div class="navbar-nav ml-auto nav-links">
+								<a href="index.html" class="nav-item nav-link">Home</a>
+								<a href="courses.html" class="nav-item nav-link active">Courses</a>
+								<a href="notice.html" class="nav-item nav-link">Notices</a>
+								<a href="about.html" class="nav-item nav-link">About Us</a>
+								
+							</div>
+							<div class="navbar-nav ml-auto">
+								<button class="btn normal-button" id="login_link" data-toggle="modal" data-target="#loginModel">Login</button>&nbsp;
+								<button class="btn normal-button" id="register_link" data-toggle="modal" data-target="#registerModel">Sign Up</button>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+<div class="modal fade" tabindex="-1" role="dialog" id="loginModel">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Login</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row" id="login_form">
+							<div class="col-md-12 login_form">
+								<form id="form_login" class="form userLogin">
+									<div class="input-container">
+										<i class="material-icons" style="font-size:24px">person</i>
+										<input class="input-field" type="text" placeholder="Email" name="user_name1" id="user_name1" required="required" >
+									</div>
+									<div class="input-container">
+										<i class="material-icons" style="font-size:24px">https</i>
+										<input class="input-field" type="password" placeholder="Password" name="password1" id="password1" required="required">
+									</div>
+									<span id="message" style="color:red;margin-left: 30px;"></span><br>
+									<button type="submit" class="btn btn-primary submit_btn" id="login_submit">Submit</button>
+									<div class="text-center">
+
+										<p>Don't have an account? &nbsp;<a onclick="$('#loginModel').one('hidden.bs.modal', function() { $('#registerModel').modal('show'); }).modal('hide');" style="color:blue;">Sign Up</a><br>
+											<a href="#">Forgot your password?</a></p>
+										</div>
+									</form>
+								</div>	
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" tabindex="-1" role="dialog" id="registerModel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Register</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="row" id="login_form">
+
+								<div class="col-md-12 register_form">
+									<form class="form addUser"  enctype="multipart/form-data">
+										
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">create</i>
+											<input class="input-field" type="text" placeholder="First name" name="first_name" id="first_name" required="required" pattern="[a-zA-Z]{2,15}" title="Please enter only character between 2 to 15 for firstname" >
+										</div>
+										
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">create</i>
+											<input class="input-field" type="text" placeholder="Last name" name="last_name" id="last_name" required="required" pattern="[a-zA-Z]{2,15}" title="Please enter only character between 2 to 15 for lastname">
+										</div>
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">mail_outline</i>
+											<input class="input-field" type="email" placeholder="Email" name="email" id="email" required="required" >
+										</div>
+
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">people</i>
+											<label class="radio-inline">
+												<input type="radio" name="radio" value="Male" id="gender" checked="checked">Male &nbsp;&nbsp;
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="radio" value="Female" id="gender">Female
+											</label>
+										</div>
+
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">assignment_ind</i>
+											<input class="input-field" type="number" placeholder="Batch (eg 18,19,20)" name="batch" id="batch" required="required" pattern="[0-9]{1,9}" title="Please enter only numbers between 0 to 9 for batch">
+										</div>
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">school</i>
+											<input class="input-field" type="text" placeholder="Section (eg A,B,C,D)" name="section" id="section" required="required" pattern="[A-Z]{1}" title="Please enter only a uppercase character for section">
+										</div>
+
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">person</i>
+											<input class="input-field" type="text" placeholder="Username" name="user_name" id="user_name" required="required" pattern="[a-zA-Z0-9 _]{4,20}" title="Please enter only character or numbers between 4 to 20 for username">
+										</div>
+
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">https</i>
+											<input class="input-field" type="password" placeholder="Password" name="password" id="password" required="required" pattern="[a-zA-Z0-9 _]{4,20}" title="Please enter only characters or numbers between 4 to 20 for password">
+										</div>
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">replay</i>
+											<input class="input-field" type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required="required" pattern="[a-zA-Z0-9 _]{4,20}" title="Please enter only characters or numbers between 4 to 20 for password">
+										</div>
+
+										<span id="message_register_error" style="color:red;margin-left: 30px;"></span><br>
+										<span id="message_register_success" style="color:green;margin-left: 30px;"></span><br>
+
+										<button type="submit" class="btn btn-primary submit_btn" id="register_submit">Submit</button>
+										<div class="text-center">
+											<p>Already a member? &nbsp;<a onclick="$('#registerModel').one('hidden.bs.modal', function() { $('#loginModel').modal('show'); }).modal('hide');" style="color:blue;">Sign In</a></p><br>
+										</div>
+									</form>
+								</div>	
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" tabindex="-1" role="dialog" id="enquireModel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Enquire</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="row" id="login_form">
+
+								<div class="col-md-12 register_form">
+									<form class="form addEnquire" autocomplete="false" >
+										
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">create</i>
+											<input class="input-field" type="text" placeholder="First name" name="first_name" id="first_name3" required="required" pattern="[a-zA-Z]{2,20}" title="Please enter only characters between 2 to 20 for first name">
+										</div>
+										
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">create</i>
+											<input class="input-field" type="text" placeholder="Last name" name="last_name" id="last_name3" required="required" pattern="[a-zA-Z]{2,20}" title="Please enter only characters between 2 to 20 for last name">
+										</div>
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">mail_outline</i>
+											<input class="input-field" type="email" placeholder="Email" name="email" id="email3" required="required">
+										</div>
+
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">phone</i>
+											<input class="input-field" type="text" placeholder="Contact No" name="phone" id="phone" required="required" pattern="[0-9]{9,15}" title="Please enter only numbers of length 9 to 15 for phone no">
+										</div>
+										<div class="input-container">
+											<i class="material-icons" style="font-size:24px">map</i>
+											<input class="input-field" type="text" placeholder="Address" name="address" id="address" required="required" pattern="[a-zA-Z0-9]{2,30}" title="Please enter only characters or numbers between 2 to 30 for address">
+										</div>
+										<span id="message_enquire_success" style="color:green;margin-left: 30px;"></span><br>
+										<button type="submit" class="btn btn-primary submit_btn" id="register_submit">Submit</button>
+										
+									</form>
+								</div>	
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<section class="pricing py-5">
+						<section class="pricing py-5">
+							<div class="container">
+								<div class="row" id="data" style="margin-top: -90px;" >
+
+								</div>
+							</div>
+						</section>
+
+
+					</div>
+				</div>
+
+				<hr/>
+<section>
+			<!-- Footer -->
+			<footer class="page-footer font-small stylish-color-dark pt-4 myfooter">
+
+				<!-- Footer Links -->
+				<div class="container text-center text-md-left">
+
+					<!-- Grid row -->
+					<div class="row">
+
+						<!-- Grid column -->
+						<div class="col-md-4 mx-auto">
+
+							<!-- Content -->
+							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
+							<p><i class="fa fa-map-marker-alt"> &nbsp;Sankhamul Tower, Kathmaundu , Nepal</i></p>
+							<p><i class="fa fa-envelope"> &nbsp;collegeapplication@gmail.com</i></p>
+							<p><i class="fa fa-phone"> &nbsp;+977 9843624525</i></p>
+
+						</div>
+						<!-- Grid column -->
+
+						<hr class="clearfix w-100 d-md-none">
+
+						<!-- Grid column -->
+						<div class="col-md-2 mx-auto">
+
+							<!-- Links -->
+							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+							<ul class="list-unstyled">
+								<li>
+									<a href="courses.html">Courses</a>
+								</li>
+								<li>
+									<a href="notice.html">Notices</a>
+								</li>
+								<li>
+									<a href="about.html">About Us</a>
+								</li>
+									</ul>
+
+						</div>
+						<!-- Grid column -->
+
+						<hr class="clearfix w-100 d-md-none">
+
+						<!-- Grid column -->
+						
+						<!-- Grid column -->
+
+						<hr class="clearfix w-100 d-md-none">
+
+						<!-- Grid column -->
+						<div class="col-md-2 mx-auto">
+
+							<!-- Links -->
+							<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+							<ul class="list-unstyled">
+								<li>
+									<a href="#" data-toggle="modal" data-target="#loginModel">Login</a>
+								</li>
+								<li>
+									<a href="#" data-toggle="modal" data-target="#registerModel">Sign Up</a>
+								</li>
+								<!-- <li>
+									<a href="#!">Link 3</a>
+								</li>
+								<li>
+									<a href="#!">Link 4</a>
+								</li> -->
+							</ul>
+							
+						</div>
+						<!-- Grid column -->
+
+					</div>
+					<!-- Grid row -->
+
+				</div>
+				<!-- Footer Links -->
+
+				<hr>
+
+				<!-- Social buttons -->
+				<ul class="list-unstyled list-inline text-center">
+					<li class="list-inline-item">
+						<a class="btn-floating btn-fb mx-1">
+							<i class="fab fa-facebook-f"> </i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a class="btn-floating btn-tw mx-1">
+							<i class="fab fa-twitter"> </i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a class="btn-floating btn-gplus mx-1">
+							<i class="fab fa-google-plus-g"> </i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a class="btn-floating btn-li mx-1">
+							<i class="fab fa-linkedin-in"> </i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a class="btn-floating btn-dribbble mx-1">
+							<i class="fab fa-instagram"> </i>
+						</a>
+					</li>
+				</ul>
+				<!-- Social buttons -->
+
+				<!-- Copyright -->
+				<div class="footer-copyright text-center py-3">© 2019 Copyright:
+					<a href="https://mdbootstrap.com/education/bootstrap/"> Kan Pro@Abhishek Rai</a>
+				</div>
+				<!-- Copyright -->
+
+			</footer>
+			<!-- Footer -->
+		</section>
+
+
+			</div>
+
+
+		</body>
+		</html>

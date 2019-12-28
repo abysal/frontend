@@ -1,0 +1,269 @@
+body{
+	font-family: "Rockwell","sans-serif";
+	margin:0px auto;
+	padding: 0px;
+  background: #fff;
+}
+
+.header1{
+	background-color: #fff;
+  top: 0;
+}
+.header1:hover{
+	opacity: 1;
+}
+
+.header1 h6{
+	font-weight: bold;
+	color: white;
+}
+
+.mynav{
+	background-color: none;
+	opacity: 1
+}
+
+.topnav-right {
+  float: right;
+}
+.normal-button{
+	background: #fd7e14;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+.nav-links{
+	font-weight: bold;
+	font-size: 18px;
+}
+header .active{
+	border-bottom: 5px solid #fd7e14;
+}
+.custom-carousel{
+	color:#fd7e14;
+	top:0;
+	right: 0;
+}
+.myfooter{
+	background: #15a8ca;
+	color: white;
+}
+a{
+	text-decoration: none;
+	color:blue;
+	cursor: pointer;
+}
+a:hover{
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.header1 h6{
+		font-size: 12px;
+	}
+}
+
+
+.input-group{
+  margin-top: 10px;
+  color: black !important;
+}
+
+.input-group-addon{
+  background: transparent;
+  color:white;
+  font-size: 30px;
+  margin-left: 5px;
+}
+input.form-control{
+  background: transparent;
+  border-radius: 0px;
+  border: 0px;
+  border-bottom: 2px solid green;
+  font-size: 17px;
+  color: black !important;
+}
+
+input:focus { 
+  background:transparent;
+}
+.submit_btn{
+  margin:  10px;
+  margin-left: 50px;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#register_form{
+color:white !important;
+}
+
+.material-icons {
+  padding: 10px;
+  background: transparent;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  background: transparent;
+  width: 100%;
+  padding: 1px;
+  outline: none;
+  color: black;
+  border:0px;
+  border-bottom: 2px solid green;
+  border-radius: 0px;
+}
+
+.input-field:focus {
+  border: transparent;
+  border-bottom: 2px solid red;
+}
+
+/* Set a style for the submit button */
+.long {
+  background-color: green;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.long:hover {
+  opacity: 1;
+  color:white;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 4, 10, 0.43); /* Black background with 0.5 opacity */
+  color: #fe7a06;
+  width:auto;
+  padding: 20px;
+  text-transform: uppercase;
+  font-family: "Arial";
+  opacity: 0.8
+
+}
+
+/*courses*/
+section.pricing {
+  color:black;
+}
+
+.pricing .card {
+  
+  border: 1px;
+  border-radius: 0rem;
+  transition: all 0.2s;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0,0,0,0);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  color: blue !important;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+  color: #007bff !important;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+.card-header{
+background: #04f97d;
+}
+.card-body{
+background: #f8f9fa;
+}
+.card-title{
+
+}
+.card-text{
+
+}
+
+.card-footer{
+background: #ccc;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+}
+
+.heading{
+  border-bottom: 4px solid #00BCD4;
+
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.body-heading{
+  padding: 10px;
+}
+
+
+
+
+
+
+

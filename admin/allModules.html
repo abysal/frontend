@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Kan Pro-Admin Panel</title>
+
+    <script src="../public/js/jquery-3.4.1.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
+    <script src="../public/moment/moment.js"></script>
+    <link rel="stylesheet" type="text/css" href="../public/wow/animate.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style-admin.css">
+   <script src="js/index.js"></script>
+  
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+
+
+<script src="../public/wow/wow.min.js"></script>
+<link rel="stylesheet" href="../public/wow/animate.css"/>
+<script>
+    new WOW().init();
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../public/images/logo.png" width="200" class="img-responsive wow fadeInLeft">
+            </div>
+
+            <ul class="list-unstyled components">
+                <h3 class="text-uppercase">&nbsp;Admin Panel</h3><br/>
+                <li class="active">
+                    <a href="index.html" >Home</a>
+                </li>
+                <li>
+                    <a href="course.html">Courses</a>
+                </li>
+                <li >
+                    <a href="module.html">Modules</a>
+                </li>
+                <li>
+                    <a href="notice.html" >Notices</a>
+                </li>
+                <li>
+                    <a href="assignment.html">Assignments</a>
+                </li>
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <button  id="logout" type="submit" class="btn btn-danger">Logout</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eee;">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info menu">
+                        <i class="fas fa-align-justify"></i>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#"><p id="user_name"></p></a>
+
+                            </li>
+                            <li class="nav-item">
+                                <img src="../public/images/sample_user.jpg" class="img-responsive" width="50" height="50" style="border-radius: 50%;" id="profile_image">
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            
+
+
+            <div class="container">
+                <div class="row" >
+                    <div class="col-md-12">
+                        <table  class="display table table-responsive" id="tableCourse" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Module Code</th>
+                                    <th>Module Name</th>
+                                    <th>Topic 1</th>
+                                    <th>Topic 2</th>
+                                    <th>Topic 3</th>
+                                    <th>Topic 4</th>
+                                    <th>Topic 5</th>
+                                    <th>Topic 6</th>
+                                    <th>Topic 7</th>
+                                    <th>Topic 8</th>
+                                    <th>Topic 9</th>
+                                    <th>Topic 10</th>
+                                    <th>Topic 11</th>
+                                    <th>Topic 12</th>
+                                    <th>Topic 13</th>
+                                    <th>Topic 14</th>
+                                    <th>Topic 15</th>
+                                    <th>Topic 16</th>
+                                    <th>Topic 17</th>
+                                    <th>Topic 18</th>
+                                    <th>Topic 19</th>
+                                    <th>Topic 20</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var tok=localStorage.getItem("token");
+         var tableCourse=$('#tableCourse').DataTable();
+
+           /*$.getJSON("http://localhost:8000/courses/getAllCourses", function(res) {
+            console.log(res);
+            $.each(res, function(index) {
+                tableCourse.row.add([
+                    res[index].course_name,res[index].course_duration,res[index].course_price,res[index].course_modules,res[index].course_desc
+                    ]).draw(false);
+            });
+        });*/
+            $.ajax({
+        type: 'get',
+        url: 'http://localhost:8000/modules',
+        beforeSend: function(xhr) {
+            if (tok) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + tok);
+            }
+        },
+        success: function(data) {
+            console.log(data);
+            $.each(data, function(index) {
+                if (data[index].topic1!=null && data[index].topic1!="") {
+                var topic1="http://localhost:8000/"+data[index].topic1;
+                var final_topic1='<a href='+topic1+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-1</a>';
+                }
+                else {
+                    var final_topic1="EMPTY";
+                }
+
+                if (data[index].topic2!=null && data[index].topic2!="") {
+                var topic2="http://localhost:8000/"+data[index].topic2;
+                var final_topic2='<a href='+topic2+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-2</a>';
+                                }
+                else {
+                    var final_topic2="EMPTY";
+                }
+                if (data[index].topic3!=null && data[index].topic3!="") {
+                var topic3="http://localhost:8000/"+data[index].topic3;
+                var final_topic3='<a href='+topic3+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-3</a>';
+                                }
+                else {
+                    var final_topic3="EMPTY";
+                }
+                if (data[index].topic4!=null && data[index].topic4!="") {
+                var topic4="http://localhost:8000/"+data[index].topic4;
+                var final_topic4='<a href='+topic4+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-4</a>';
+                                }
+                else {
+                    var final_topic4="EMPTY";
+                }
+                if (data[index].topic5!=null && data[index].topic5!="") {
+                var topic5="http://localhost:8000/"+data[index].topic5;
+                var final_topic5='<a href='+topic5+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-5</a>';
+                                }
+                else {
+                    var final_topic5="EMPTY";
+                }
+                if (data[index].topic6!=null && data[index].topic6!="") {
+                var topic6="http://localhost:8000/"+data[index].topic6;
+                var final_topic6='<a href='+topic6+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-6</a>';
+                                }
+                else {
+                    var final_topic6="EMPTY";
+                }
+                if (data[index].topic7!=null && data[index].topic7!="") {
+                var topic7="http://localhost:8000/"+data[index].topic7;
+                var final_topic7='<a href='+topic7+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-7</a>';
+                                }
+                else {
+                    var final_topic7="EMPTY";
+                }
+                if (data[index].topic8!=null && data[index].topic8!="") {
+                var topic8="http://localhost:8000/"+data[index].topic8;
+                var final_topic8='<a href='+topic8+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-8</a>';
+                                }
+                else {
+                    var final_topic8="EMPTY";
+                }
+                if (data[index].topic9!=null && data[index].topic9!="") {
+                var topic9="http://localhost:8000/"+data[index].topic9;
+                var final_topic9='<a href='+topic9+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-9</a>';
+                                }
+                else {
+                    var final_topic9="EMPTY";
+                }
+                
+                if (data[index].topic10!=null && data[index].topic10!="") {
+                var topic10="http://localhost:8000/"+data[index].topic10;
+                var final_topic10='<a href='+topic10+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-10</a>';
+                                }
+                else {
+                    var final_topic10="EMPTY";
+                }
+                
+                if (data[index].topic11!=null && data[index].topic11!="") {
+                var topic11="http://localhost:8000/"+data[index].topic11;
+                var final_topic11='<a href='+topic11+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-11</a>';
+                                }
+                else {
+                    var final_topic11="EMPTY";
+                }
+                
+                if (data[index].topic12!=null && data[index].topic12!="") {
+                var topic12="http://localhost:8000/"+data[index].topic12;
+                var final_topic12='<a href='+topic12+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-12</a>';
+                                }
+                else {
+                    var final_topic12="EMPTY";
+                }
+                
+                if (data[index].topic13!=null && data[index].topic13!="") {
+                var topic13="http://localhost:8000/"+data[index].topic13;
+                var final_topic13='<a href='+topic13+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-13</a>';
+                                }
+                else {
+                    var final_topic13="EMPTY";
+                }
+                
+                if (data[index].topic14!=null && data[index].topic14!="") {
+                var topic14="http://localhost:8000/"+data[index].topic14;
+                var final_topic14='<a href='+topic14+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-14</a>';
+                                }
+                else {
+                    var final_topic14="EMPTY";
+                }
+                
+                if (data[index].topic15!=null && data[index].topic15!="") {
+                var topic15="http://localhost:8000/"+data[index].topic15;
+                var final_topic15='<a href='+topic15+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-15</a>';
+                                }
+                else {
+                    var final_topic15="EMPTY";
+                }
+                
+                if (data[index].topic16!=null && data[index].topic16!="") {
+                var topic16="http://localhost:8000/"+data[index].topic16;
+                var final_topic16='<a href='+topic16+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-16</a>';
+                                }
+                else {
+                    var final_topic16="EMPTY";
+                }
+                
+                if (data[index].topic17!=null && data[index].topic17!="") {
+                var topic17="http://localhost:8000/"+data[index].topic17;
+                var final_topic17='<a href='+topic17+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-17</a>';
+                                }
+                else {
+                    var final_topic17="EMPTY";
+                }
+                
+                if (data[index].topic18!=null && data[index].topic18!="") {
+                var topic18="http://localhost:8000/"+data[index].topic18;
+                var final_topic18='<a href='+topic18+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-18</a>';
+                                }
+                else {
+                    var final_topic18="EMPTY";
+                }
+                
+                if (data[index].topic19!=null && data[index].topic19!="") {
+                var topic19="http://localhost:8000/"+data[index].topic19;
+                var final_topic19='<a href='+topic19+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-19</a>';
+                                }
+                else {
+                    var final_topic19="EMPTY";
+                }
+                
+                if (data[index].topic20!=null && data[index].topic20!="") {
+                var topic20="http://localhost:8000/"+data[index].topic20;
+                var final_topic20='<a href='+topic20+' target="blank" style="color:blue;">'+data[index].module_code+'-Topic-20</a>';
+                                }
+                else {
+                    var final_topic20="EMPTY";
+                }
+
+                tableCourse.row.add([
+                    data[index].module_code,data[index].module_name,final_topic1,final_topic2,final_topic3,final_topic4,final_topic5,
+                    final_topic6,final_topic7,final_topic8,final_topic9,final_topic10,final_topic11,final_topic12,final_topic13,final_topic14,final_topic15,final_topic16,final_topic17,final_topic18,final_topic19,final_topic20
+                    ]).draw(false);
+            });
+            
+        },
+        error: function() {
+            //alert("Sorry, you are not logged in.");
+            //location.href="../index.html";
+        }
+    });
+
+
+       } );
+
+   </script>
+
+
+
+</body>
+
+</html>
